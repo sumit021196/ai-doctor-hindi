@@ -5,9 +5,9 @@ import torch
 # Load model and tokenizer only once
 @st.cache_resource
 def load_model():
-    model_name = "google/flan-t5-xl"
-    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-xl")
+    model_name = "google/flan-t5-base"
+    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
     return tokenizer, model
 
 tokenizer, model = load_model()
